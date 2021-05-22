@@ -14,11 +14,12 @@ spring:
 #    defaultZone: http://192.168.1.112:${server.port}/eureka
 
 
+
 #集群版eureka配置
 eureka:
  client:
    #将当前的eureka服务注册到另外一个Eureka服务器上（虚拟机）
-  register-with-eureka: true
+  register-with-eureka: true    #由于该应用为注册中心，所以设置为false, 代表不向注册中心注册自己。
   #同时向另外一台eureka服务器索要信息
   fetch-registry: true
   service-url:
